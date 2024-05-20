@@ -1,0 +1,30 @@
+
+    position: relative;
+    border:5px ;
+    border-radius: 5%;
+    background-color: #111211d2;
+    padding: 5px;
+}
+.track-container::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 90%;
+    height: 70%;
+    background: conic-gradient(#000000, rgb(247, 0, 255) , #ffc800, rgb(0, 0, 0), #00ffcc, #7b45d1, #ff0066);
+    transform: translate(-50%, -50%) rotate(0deg);
+    animation: spin 3.8s linear infinite;
+    z-index: -1;
+    pointer-events: none;
+    filter: blur(100px);
+}
+
+@keyframes spin {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(-360deg);
+    }
+}

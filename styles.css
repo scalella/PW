@@ -1,0 +1,157 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: url("./public/images/frctl.jpg") center fixed;
+    background-size: cover;
+    color: #fff;
+}
+.logo-img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+.logo-foto {
+    width: 90%;
+    max-width: 385px;
+    border-radius: 15%;
+}
+.track-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 90%;
+    max-width: 530px;
+    border: 5px solid transparent;
+    border-radius: 5%;
+    background-color: #111211a1;
+    padding: 5px;
+    margin: 20px 0;
+    position: relative;
+}
+.track-container::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 90%;
+    height: 70%;
+    background: conic-gradient(#000000, rgb(247, 0, 255), #ffc800, rgb(0, 0, 0), #00ffcc, #7b45d1, #ff0066);
+    transform: translate(-50%, -50%) rotate(0deg);
+    animation: spin 3.8s linear infinite;
+    z-index: -1;
+    pointer-events: none;
+    filter: blur(80px);
+    opacity: 90%;
+}
+@keyframes spin {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(-360deg);
+    }
+}
+#track-title {
+    margin-bottom: 1rem;
+}
+.track-image {
+    width: 100%;
+    max-width: 400px;
+    max-height: 400px;
+    margin-bottom: 1rem;
+    border-radius: 20px;
+}
+.track-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+.track-controls button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 7px;
+    background: #000000;
+    color: #fff;
+    cursor: pointer;
+}
+.track-controls button:hover {
+    background: #fff;
+    color: #1DB954;
+}
+#progress-bar {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 1rem;
+}
+.track-volumen {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 210px;
+    background: #000000;
+    border-radius: 7px;
+    padding: 5px;
+}
+#volume-bar {
+    width: 100%;
+    max-width: 100px;
+    margin-top: 2px;
+}
+.bio {
+    background-color: #000000c2;
+    background-size: cover;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 5%;
+    width: 90%;
+    max-width: 530px;
+}
+.bio p {
+    margin-bottom: 20px;
+    list-style: none;
+    padding: 0;
+}
+@media (min-width: 768px) {
+    .track-controls {
+        flex-direction: row;
+    }
+}
+@media (max-width: 480px) {
+    .logo-foto {
+        width: 200px;
+    }
+    .track-container {
+        padding: 5px;
+    }
+    #track-title {
+        font-size: 1rem;
+    }
+    .track-image {
+        max-width: 200px;
+        max-height: 200px;
+    }
+    button {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+    .track-volumen {
+        max-width: 150px;
+        height: 30px;
+    }
+    #volume-bar {
+        max-width: 70px;
+    }
+}
