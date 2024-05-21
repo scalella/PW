@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
             imageInterval = setInterval(() => {
                 imageIndex = (imageIndex + 1) % track.image.length;
                 trackImageElement.src = track.image[imageIndex];
-            }, 532);
+            }, 775);
         } else {
             trackImageElement.src = track.image;
         }

@@ -10,33 +10,45 @@ body {
     background-size: cover;
     color: #fff;
 }
-.logo-img {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+
+header {
     margin-top: 20px;
 }
+
+.logo-img {
+    display: flex;
+    justify-content: center;
+}
+
 .logo-foto {
     width: 90%;
     max-width: 385px;
     border-radius: 15%;
 }
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+}
+
 .track-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     text-align: center;
     width: 90%;
     max-width: 530px;
     border: 5px solid transparent;
     border-radius: 5%;
-    background-color: #111211a1;
-    padding: 5px;
+    background-color: rgba(17, 18, 17, 0.63);
+    padding: 20px;
     margin: 20px 0;
     position: relative;
 }
+
 .track-container::before {
     content: '';
     position: absolute;
@@ -52,6 +64,7 @@ body {
     filter: blur(80px);
     opacity: 90%;
 }
+
 @keyframes spin {
     0% {
         transform: translate(-50%, -50%) rotate(0deg);
@@ -60,9 +73,11 @@ body {
         transform: translate(-50%, -50%) rotate(-360deg);
     }
 }
+
 #track-title {
     margin-bottom: 1rem;
 }
+
 .track-image {
     width: 100%;
     max-width: 400px;
@@ -70,12 +85,14 @@ body {
     margin-bottom: 1rem;
     border-radius: 20px;
 }
+
 .track-controls {
     display: flex;
     flex-direction: column;
     gap: 1rem;
     margin: 1rem 0;
 }
+
 .track-controls button {
     padding: 0.5rem 1rem;
     border: none;
@@ -84,16 +101,19 @@ body {
     color: #fff;
     cursor: pointer;
 }
+
 .track-controls button:hover {
     background: #fff;
     color: #1DB954;
 }
+
 #progress-bar {
     width: 100%;
     max-width: 300px;
     margin-bottom: 1rem;
 }
-.track-volumen {
+
+.track-volume {
     margin-top: 1rem;
     display: flex;
     flex-direction: column;
@@ -105,52 +125,59 @@ body {
     border-radius: 7px;
     padding: 5px;
 }
+
 #volume-bar {
     width: 100%;
     max-width: 100px;
     margin-top: 2px;
 }
+
 .bio {
-    background-color: #000000c2;
-    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.76);
     margin: 20px 0;
     padding: 20px;
     border-radius: 5%;
     width: 90%;
     max-width: 530px;
 }
+
 .bio p {
     margin-bottom: 20px;
-    list-style: none;
-    padding: 0;
 }
+
 @media (min-width: 768px) {
     .track-controls {
         flex-direction: row;
     }
 }
+
 @media (max-width: 480px) {
     .logo-foto {
         width: 200px;
     }
+
     .track-container {
         padding: 5px;
     }
+
     #track-title {
         font-size: 1rem;
     }
+
     .track-image {
         max-width: 200px;
         max-height: 200px;
     }
+
     button {
         width: 100%;
         margin-bottom: 5px;
     }
-    .track-volumen {
+
+    .track-volume {
         max-width: 150px;
-        height: 30px;
     }
+
     #volume-bar {
         max-width: 70px;
     }
